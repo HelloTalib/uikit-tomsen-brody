@@ -1,0 +1,189 @@
+.tm-page {
+  position: relative;
+  z-index: 0;
+}
+.uk-section-default {
+  background-image: url("https://demo.yootheme.com/themes/joomla/2019/tomsen-brody/templates/yootheme/vendor/assets/uikit-themes/master-tomsen-brody/images/section-light-background.svg");
+  // background: #fff;
+  background-position-x: 50%;
+  background-repeat: repeat-y;
+}
+.uk-navbar-container {
+  border-bottom: 1px solid #ddd;
+}
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background-color: #fff;
+}
+.uk-navbar-dropbar {
+  background-image: linear-gradient(to top, #ddd, transparent 1px);
+}
+.uk-navbar-nav {
+  & > li {
+    // position: relative;
+    &:hover {
+      & > a {
+        color: #fff;
+      }
+      & > a::before {
+        height: 100%;
+        background: $global-primary-background;
+      }
+    }
+    & > a {
+      position: relative;
+      color: #000;
+      font-size: 15px;
+      font-family: "Barlow Semi Condensed", sans-serif;
+      line-height: 23.25px;
+      padding: 0 40px;
+      transition: all 0.1 ease-in-out;
+      font-weight: 500;
+      z-index: 999;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        height: 10px;
+        background-color: transparent;
+        transition: 0.2s ease-in-out;
+        transition-property: background-color, border-color, box-shadow, height,
+          right;
+        left: 0;
+        right: 0;
+      }
+    }
+    &:hover {
+      & a::before {
+        visibility: visible;
+      }
+    }
+    &.uk-active {
+      & > a {
+        color: #fff;
+      }
+      & > a::before {
+        height: 100%;
+        background: $global-primary-background;
+      }
+    }
+  }
+}
+.uk-heading-2xlarge {
+  font-size: 180px;
+  line-height: 144px;
+  letter-spacing: -1.125px;
+  font-weight: 700;
+  .uk-heading-divider {
+    border-width: 25px;
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    font-size: 90px;
+    line-height: 72px;
+    .uk-heading-divider {
+      border-width: 10px;
+    }
+  }
+  @media screen and (max-width: $breakpoint-large) {
+    font-size: 127.5px;
+    line-height: 102px;
+    .uk-heading-divider {
+      border-width: 12px;
+    }
+  }
+}
+.uk-heading-xlarge {
+  font-size: 127.5px;
+  line-height: 102px;
+  letter-spacing: -1.125px;
+  font-weight: 700;
+  .uk-heading-divider {
+    border-width: 12px;
+  }
+  @media screen and (max-width: $breakpoint-medium) {
+    font-size: 75px;
+    line-height: 60px;
+    .uk-heading-divider {
+      border-width: 10px;
+    }
+  }
+  @media screen and (max-width: $breakpoint-large) {
+    font-size: 90px;
+    line-height: 72px;
+    .uk-heading-divider {
+      border-width: 12px;
+    }
+  }
+}
+.uk-heading-small {
+  font-size: 56px;
+  line-height: 50.4px;
+  letter-spacing: -1.125px;
+  font-weight: 700;
+  .uk-heading-divider {
+    border-width: 8px;
+  }
+
+  @media screen and (max-width: $breakpoint-large) {
+    font-size: 44.8px;
+    line-height: 40.32px;
+    .uk-heading-divider {
+      border-width: 5px;
+    }
+  }
+}
+.uk-heading-line > ::after {
+  width: 45px;
+  border-width: 3px;
+}
+.uk-button-primary {
+  color: #fff;
+  background-color: #0045d4;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  border: 3px solid transparent;
+  line-height: 46px;
+  padding: 0 30px;
+  &:hover {
+    border: 3px solid $global-primary-background;
+    background: #fff;
+    color: $global-primary-background;
+  }
+}
+
+.uk-navbar-dropdown-nav {
+  & > li {
+    & a {
+      // color: $global-color;
+      font-size: 15px;
+      letter-spacing: -0.64px;
+      font-weight: 500;
+      font-family: $global-font-family;
+      &:hover {
+        color: $global-color;
+      }
+    }
+  }
+}
+
+.uk-offcanvas-bar {
+  background-color: $global-color;
+  a {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    padding: 2px 0;
+  }
+  .uk-nav-sub a {
+    color: #919291;
+    &:hover {
+      color: $global-primary-background;
+    }
+  }
+}
+
+.uk-section-primary:not(.uk-preserve-color) .uk-heading-divider {
+  border-color: #fff;
+}
